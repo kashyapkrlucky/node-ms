@@ -12,7 +12,7 @@ function CreateComment({ postId, getPosts }) {
 
     const onCreate = async () => {
         if (text) {
-            const res = await axios.post(`http://localhost:4002/post/${postId}/comments/create`, { text });
+            const res = await axios.post(`http://localhost:4004/post/${postId}/comments/create`, { text });
             if (res) {
                 getPosts();
                 setText('');

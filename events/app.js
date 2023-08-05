@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const axios = require('axios');
+const PORT = process.env.PORT || 4002;
 
 const app = express();
 app.use(bodyParser.json());
@@ -16,6 +17,6 @@ app.post('/events', async (req, res) => {
     res.send('done');
 });
 
-app.listen(4003, () => {
-    console.log('Event Bus Server is logging on PORT', 4003);
+app.listen(PORT, () => {
+    console.log('Event Bus Server is logging on PORT', PORT);
 });

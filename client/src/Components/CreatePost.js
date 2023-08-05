@@ -10,7 +10,7 @@ function CreatePost({ getPosts }) {
     }
     const onCreate = async () => {
         if (title) {
-            const res = await axios.post('http://localhost:4001/post/create', { title });
+            const res = await axios.post('http://localhost:4003/post/create', { title });
             if (res) {
                 getPosts();
                 setTitle('');

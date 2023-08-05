@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { randomBytes } = require('crypto');
 const axios = require('axios');
+const PORT = process.env.PORT || 4003;
 
 const app = express();
 app.use(bodyParser.json());
@@ -28,6 +29,6 @@ app.post('/post/create', async (req, res) => {
 //     res.send({});
 // });
 
-app.listen(4001, () => {
-    console.log('Posts Server is logging on PORT', 4001);
+app.listen(PORT, () => {
+    console.log('Posts Server is logging on PORT', PORT);
 });

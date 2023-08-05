@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const axios = require('axios');
-
+const PORT = process.env.PORT || 4001;
 
 const app = express();
 app.use(bodyParser.json());
@@ -34,6 +34,6 @@ app.post('/events', (req, res) => {
     res.send({});
 });
 
-app.listen(4004, () => {
-    console.log('Query Server is logging on PORT', 4004);
+app.listen(PORT, () => {
+    console.log('Query Server is logging on PORT', PORT);
 });

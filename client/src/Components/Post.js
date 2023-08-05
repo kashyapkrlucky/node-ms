@@ -5,10 +5,10 @@ import axios from 'axios';
 
 function Post({ post, getPosts }) {
   const [comments, setComments] = useState([]);
-  const getComments = async () => {
-    const res = await axios.get(`http://localhost:4002/post/${post.id}/comments`);
-    setComments(res.data);
-  }
+  // const getComments = async () => {
+  //   const res = await axios.get(`http://localhost:4004/post/${post.id}/comments`);
+  //   setComments(res.data);
+  // }
   useEffect(() => {
     // getComments();
     return () => {
