@@ -9,6 +9,7 @@ function Post({ post, getPosts }) {
   //   const res = await axios.get(`http://localhost:4004/post/${post.id}/comments`);
   //   setComments(res.data);
   // }
+  
   useEffect(() => {
     // getComments();
     return () => {

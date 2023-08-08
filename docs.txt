@@ -1,2 +1,21 @@
-docker run -p 4004:4004 kashyapkrlucky/comments
+// docker build -t kashyapkrlucky/posts:0.0.1
+// docker run -p 4004:4004 kashyapkrlucky/comments
+
+// kubectl apply -f .\posts.yaml
+// kubectl get pods
+// kubectl rollout restart deployment posts-depl
+// kubectl logs deployment-name
+
+/*
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posts
+spec:
+  containers:
+    - name: posts
+      image: kashyapkrlucky/posts:0.0.1
+
+*/
+
 
